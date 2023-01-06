@@ -8,10 +8,12 @@
 <where>
   <choose>
     <when test="ids == null">
-      ...
+      <if test="name != null">
+        displayNm LIKE CONCAT('%', #{name}, '%')
+      </if>
     </when>
     <otherwise>
-      id IN ( <foreach collection="ids" item="id" separator=",">#{id}</foreach> )
+      AND id IN ( <foreach collection="ids" item="id" separator=",">#{id}</foreach> )
     </otherwise>
   </choose>
 </where>
