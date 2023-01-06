@@ -1,6 +1,6 @@
 # mybatis
-</br>
-## Dynamic SQL
+
+##  Dynamic SQL
 ### if
 ### choose(when, otherwise)
 ### foreach
